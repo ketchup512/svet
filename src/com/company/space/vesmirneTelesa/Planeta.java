@@ -1,6 +1,6 @@
 package com.company.space.vesmirneTelesa;
 
-public class Planeta {
+public class Planeta extends  VesmirneTelesa{
 
     private double vaha, priemer, gravitacia;
     private String name;

@@ -26,6 +26,6 @@ public class Main {
         Planeta pcklubFU = new Planeta("Rampova", 20000, 6);
         Planeta pcklubBN = new Planeta("BozenyNemcovej", 20000, 3);
 
-        Hviezda UVT = new Hviezda();*/
+        Hviezda KontrolneOrgany = new Hviezda();*/
     }
 }

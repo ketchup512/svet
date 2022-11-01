@@ -2,11 +2,13 @@ import com.company.space.Vesmir;
 import com.company.space.vesmirneTelesa.Hviezda;
 import com.company.space.vesmirneTelesa.Planeta;
 import com.company.space.vesmirneTelesa.Slnecna_sustava;
+import com.company.space.Galaxia;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         Vesmir svetos = new Vesmir();
+        Galaxia Mliecna_cesta = new Galaxia("Galaxy");
         svetos.start();
 
         Slnecna_sustava m_sustava = new Slnecna_sustava();
@@ -17,6 +19,7 @@ public class Main {
         m_sustava.addTeleso(Uran);
         m_sustava.addTeleso(Neptun);
 
+        Mliecna_cesta.addSustava(m_sustava);
         svetos.stop();
 
       /*  Planeta pcklubJ13 = new Planeta("Jedlikova13", 20000, 10);

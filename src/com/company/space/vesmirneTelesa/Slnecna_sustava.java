@@ -15,19 +15,19 @@ public class Slnecna_sustava {
         Slnko = new Hviezda("Slnko");
         setObject_counter(0);
         obezne_telesa[object_counter]=new Planeta("Mars",432432,432432);
-        object_counter++;
+        setObject_counter(1+object_counter);
         obezne_telesa[object_counter]= new Planeta("Venusa", 55555,32342);
-        object_counter++;
+        setObject_counter(1+object_counter);
         obezne_telesa[object_counter]= new Planeta("Zem", 55555,32342);
-        object_counter++;
+        setObject_counter(1+object_counter);
         obezne_telesa[object_counter]= new Planeta("Jupiter", 55555,32342);
-        object_counter++;
+        setObject_counter(1+object_counter);
         obezne_telesa[object_counter]= new Planeta("Saturn", 55555,32342);
-        object_counter++;
+        setObject_counter(1+object_counter);
         obezne_telesa[object_counter]= new Hviezda("polarka");
-        object_counter++;
+        setObject_counter(1+object_counter);
         obezne_telesa[object_counter]= new Kometa("IMCOMET");
-        object_counter++;
+        setObject_counter(1+object_counter);
 
     }
 

@@ -7,7 +7,7 @@ public class Slnecna_sustava {
     private Planeta Jupiter;
     private Planeta Saturn;
 
-    private VesmirneTelesa[] obezne_telesa= new VesmirneTelesa[500000000];
+    private VesmirneTelesa[] obezne_telesa= new VesmirneTelesa[5000];
 
     private int object_counter;
 

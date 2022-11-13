@@ -4,6 +4,10 @@ import com.company.space.vesmirneTelesa.Planeta;
 import com.company.space.vesmirneTelesa.Slnecna_sustava;
 import com.company.space.Galaxia;
 import com.company.space.vesmirneTelesa.Zem;
+import com.company.zive_tvory.Ryba;
+import com.company.zive_tvory.Vtak;
+import com.company.zive_tvory.Delfin;
+import com.company.zive_tvory.Tvor;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,6 +23,16 @@ public class Main {
         Planeta Uran = new Planeta("Uran",2345,6543);
         Zem MatickaZem = new Zem("Zem", 59722*Math.pow(10,24),12756);
 
+        for (int i=0; i<50; i++){
+            MatickaZem.addTvor(new Ryba());
+            MatickaZem.addTvor(new Vtak());
+            MatickaZem.addTvor(new Delfin());
+        }
+        Tvor[] poleTvorov = MatickaZem.getPoleTvorov();
+
+        for (int i=0; i< MatickaZem.getPocet_Tvorov(); i++){
+            poleTvorov[i].hybsa(10,10,10);
+        }
         m_sustava.addTeleso(Mercury);
         m_sustava.addTeleso(Uran);
         m_sustava.addTeleso(Neptun);
@@ -31,13 +45,5 @@ public class Main {
         System.out.println(Galaxia.getSprava());
         svetos.stop();
 
-      /*  Planeta pcklubJ13 = new Planeta("Jedlikova13", 20000, 10);
-        Planeta pcklubJ9 = new Planeta("Jedlikova9", 20000, 20);
-        Planeta pcklubJ5 = new Planeta("Jedlikova5", 20000, 8);
-        Planeta pcklubR = new Planeta("Rampova", 20000, 5);
-        Planeta pcklubFU = new Planeta("Rampova", 20000, 6);
-        Planeta pcklubBN = new Planeta("BozenyNemcovej", 20000, 3);
-
-        Hviezda KontrolneOrgany = new Hviezda();*/
     }
 }

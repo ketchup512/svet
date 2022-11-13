@@ -1,13 +1,19 @@
 import com.company.space.Vesmir;
-import com.company.space.vesmirneTelesa.Hviezda;
 import com.company.space.vesmirneTelesa.Planeta;
 import com.company.space.vesmirneTelesa.Slnecna_sustava;
 import com.company.space.Galaxia;
 import com.company.space.vesmirneTelesa.Zem;
-import com.company.zive_tvory.Ryba;
-import com.company.zive_tvory.Vtak;
 import com.company.zive_tvory.Delfin;
 import com.company.zive_tvory.Tvor;
+import com.company.zive_tvory.hmyz.Mucha;
+import com.company.zive_tvory.ryby.Kapor;
+import com.company.zive_tvory.ryby.Orlik;
+import com.company.zive_tvory.ryby.Pstruh;
+
+import java.util.Date;
+
+import java.awt.image.DataBuffer;
+import java.awt.image.Kernel;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,9 +29,29 @@ public class Main {
         Planeta Uran = new Planeta("Uran",2345,6543);
         Zem MatickaZem = new Zem("Zem", 59722*Math.pow(10,24),12756);
 
+        Date dNow = new Date();
+        Kapor vianocnykapor = new Kapor(50);
+        Pstruh cervenarybka = new Pstruh(20);
+        Orlik orlikObycajny = new Orlik(6);
+        cervenarybka.born(dNow);
+        orlikObycajny.born(dNow);
+        vianocnykapor.born(dNow);
+        cervenarybka.hybsa(55,55,55);
+        vianocnykapor.hybsa(10,15,87);
+        orlikObycajny.hybsa(99,33,45);
+        vianocnykapor.die(dNow);
+        cervenarybka.die(dNow);
+
+        Mucha vinnaMucha = new Mucha();
+
+        MatickaZem.addTvor(vinnaMucha);
+        MatickaZem.addTvor(orlikObycajny);
+        MatickaZem.addTvor(vianocnykapor);
+        MatickaZem.addTvor(cervenarybka);
         for (int i=0; i<50; i++){
-            MatickaZem.addTvor(new Ryba());
-            MatickaZem.addTvor(new Vtak());
+           // MatickaZem.addTvor(new Ryba(5));
+          //  MatickaZem.addTvor(new Vtak(5));
+          //  MatickaZem.addTvor(new Kapor(50));
             MatickaZem.addTvor(new Delfin());
         }
         Tvor[] poleTvorov = MatickaZem.getPoleTvorov();

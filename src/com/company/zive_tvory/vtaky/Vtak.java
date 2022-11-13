@@ -1,14 +1,21 @@
-package com.company.zive_tvory;
+package com.company.zive_tvory.vtaky;
+
+import com.company.zive_tvory.stavovce_diely.Stavovec;
 
 import java.util.Date;
 
-public class Delfin extends Tvor{
+public abstract class Vtak extends Stavovec {
+
+    public Vtak(int pocet_stavcov) {
+        super(pocet_stavcov);
+    }
+
     @Override
     public void hybsa(int direction_x, int direction_y, int direction_z){
         setY(direction_y);
         setX(direction_x);
         setZ(direction_z);
-        System.out.println("Plavam, lebo zijem vo vode. A sprevadzam namornikov");
+        System.out.println("Ja lietim\n Lietam, lebo mam kridielka");
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.company.zive_tvory.stavovce_diely;
+package com.company.zive_tvory.stavovce.stavovce_diely.sustavy;
 
 public enum Typ_sustavy {
     OPORNA,

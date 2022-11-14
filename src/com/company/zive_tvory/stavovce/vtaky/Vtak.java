@@ -1,6 +1,6 @@
-package com.company.zive_tvory.vtaky;
+package com.company.zive_tvory.stavovce.vtaky;
 
-import com.company.zive_tvory.stavovce_diely.Stavovec;
+import com.company.zive_tvory.stavovce.stavovce_diely.Stavovec;
 
 import java.util.Date;
 

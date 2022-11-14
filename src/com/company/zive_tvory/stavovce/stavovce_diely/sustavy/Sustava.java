@@ -1,6 +1,6 @@
-package com.company.zive_tvory.stavovce_diely;
+package com.company.zive_tvory.stavovce.stavovce_diely.sustavy;
 
-public class Sustava {
+public abstract class Sustava {
     Typ_sustavy typ_sustavy;
 
     public Sustava(Typ_sustavy typ_sustavy) {

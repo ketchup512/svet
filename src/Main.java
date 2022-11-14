@@ -5,15 +5,12 @@ import com.company.space.Galaxia;
 import com.company.space.vesmirneTelesa.Zem;
 import com.company.zive_tvory.Delfin;
 import com.company.zive_tvory.Tvor;
-import com.company.zive_tvory.hmyz.Mucha;
-import com.company.zive_tvory.ryby.Kapor;
-import com.company.zive_tvory.ryby.Orlik;
-import com.company.zive_tvory.ryby.Pstruh;
+import com.company.zive_tvory.bezstavovce.hmyz.Mucha;
+import com.company.zive_tvory.stavovce.ryby.Kapor;
+import com.company.zive_tvory.stavovce.ryby.Orlik;
+import com.company.zive_tvory.stavovce.ryby.Pstruh;
 
 import java.util.Date;
-
-import java.awt.image.DataBuffer;
-import java.awt.image.Kernel;
 
 public class Main {
     public static void main(String[] args) {

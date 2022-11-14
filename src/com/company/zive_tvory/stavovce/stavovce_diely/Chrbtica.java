@@ -1,6 +1,4 @@
-package com.company.zive_tvory.stavovce_diely;
-
-import com.company.zive_tvory.stavovce_diely.Stavec;
+package com.company.zive_tvory.stavovce.stavovce_diely;
 
 public class Chrbtica {
     protected Stavec[] stavec;

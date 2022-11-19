@@ -8,7 +8,7 @@ import java.util.Date;
 public class Stavovec extends Tvor{
 
     protected Chrbtica chrbtica;
-    protected Sustava[] sustavy;
+    protected Sustava[] sustavy = new Sustava[8];
 
     protected void create_sustavy(){
         sustavy[0] = new Obehova_sustava_stavovec(Typ_sustavy.OBEHOVA);

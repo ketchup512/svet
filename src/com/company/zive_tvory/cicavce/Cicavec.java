@@ -7,6 +7,8 @@ import com.company.zive_tvory.stavovce.stavovce_diely.sustavy.nervova.Nervova_su
 public abstract class Cicavec extends Stavovec implements cicable{
 
     private float temperature;
+
+
     @Override
     protected void create_sustavy() {
         sustavy[0] = new Obehova_sustava_stavovec(Typ_sustavy.OBEHOVA);

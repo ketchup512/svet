@@ -7,9 +7,9 @@ import java.util.Date;
 
 public class Muz extends Clovek{
 
-  /* public Muz(Clovek mama, Clovek otec, int pocet_stavcov) {
+   public Muz(Clovek mama, Clovek otec, int pocet_stavcov) {
         super(mama, otec, pocet_stavcov);
-    }*/
+    }
 
     public Muz(Clovek mama, Clovek otec, int pocet_stavcov, String meno, String priezvisko){
         super(mama, otec, pocet_stavcov);

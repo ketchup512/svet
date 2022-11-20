@@ -21,6 +21,15 @@ public abstract class Clovek extends Cicavec {
                 '}';
     }
 
+
+    public void setMeno(String meno) {
+        this.meno = meno;
+    }
+
+    public void setPriezvisko(String priezvisko) {
+        this.priezvisko = priezvisko;
+    }
+
     public Clovek(Clovek mama, Clovek otec, int pocet_stavcov){
        super(pocet_stavcov);
 

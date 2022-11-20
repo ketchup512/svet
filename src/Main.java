@@ -6,6 +6,7 @@ import com.company.space.vesmirneTelesa.Zem;
 import com.company.zive_tvory.Delfin;
 import com.company.zive_tvory.Tvor;
 import com.company.zive_tvory.bezstavovce.hmyz.Mucha;
+import com.company.zive_tvory.clovecina.Clovek;
 import com.company.zive_tvory.clovecina.Muz;
 import com.company.zive_tvory.clovecina.Zena;
 import com.company.zive_tvory.stavovce.ryby.Kapor;
@@ -27,6 +28,17 @@ public class Main {
         Planeta Neptun = new Planeta("Neptun",5432,2345);
         Planeta Uran = new Planeta("Uran",2345,6543);
         Zem MatickaZem = new Zem("Zem", 59722*Math.pow(10,24),12756);
+
+        m_sustava.addTeleso(Mercury);
+        m_sustava.addTeleso(Uran);
+        m_sustava.addTeleso(Neptun);
+
+        Mliecna_cesta.addSustava(m_sustava);
+        Mliecna_cesta.addSustava(m_sustava);
+        System.out.println(Galaxia.getSprava());
+
+        Syzranova.addSustava(m_sustava);
+        System.out.println(Galaxia.getSprava());
 
         Date dNow = new Date();
         Kapor vianocnykapor = new Kapor(50);
@@ -60,24 +72,27 @@ public class Main {
         }
 
         Muz Adam = new Muz(null, null, 34, "Adam", "Prvy");
-        Zena Eva = new Zena(null, null,34, "Eva", "Prvy");
+        Zena Lilit = new Zena(null, null,34, "Lilit", "Prva");
         MatickaZem.addTvor(Adam);
-        MatickaZem.addTvor(Eva);
+        MatickaZem.addTvor(Lilit);
 
         System.out.println(Adam);
-        System.out.println(Eva);
+        System.out.println(Lilit);
 
+        Clovek Kain = Lilit.splodit(Adam);
+        Kain.born(dNow);
+        Kain.setMeno("Kain");
 
-        m_sustava.addTeleso(Mercury);
-        m_sustava.addTeleso(Uran);
-        m_sustava.addTeleso(Neptun);
+        Clovek Abel = Lilit.splodit(Adam);
+        Abel.born(dNow);
+        Abel.setMeno("Abel");
 
-        Mliecna_cesta.addSustava(m_sustava);
-        Mliecna_cesta.addSustava(m_sustava);
-        System.out.println(Galaxia.getSprava());
+        System.out.println(Kain);
+        System.out.println(Abel);
 
-        Syzranova.addSustava(m_sustava);
-        System.out.println(Galaxia.getSprava());
+        MatickaZem.addTvor(Kain);
+        MatickaZem.addTvor(Abel);
+
         svetos.stop();
 
     }

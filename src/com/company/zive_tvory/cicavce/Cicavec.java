@@ -10,7 +10,7 @@ public abstract class Cicavec extends Stavovec implements cicable{
 
 
     @Override
-    protected void create_sustavy() {
+    public void create_sustavy() {
         sustavy[0] = new Obehova_sustava_stavovec(Typ_sustavy.OBEHOVA);
         sustavy[1] = new Oporna_sustava_stavovec(Typ_sustavy.OPORNA);
         sustavy[2] = new Vylucovacia_sustava_stavovec(Typ_sustavy.VYLUCOVACIA);

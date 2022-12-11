@@ -1,3 +1,5 @@
+import com.company.auta.Auto;
+import com.company.auta.UniverseCarFactory;
 import com.company.space.Vesmir;
 import com.company.space.vesmirneTelesa.Planeta;
 import com.company.space.vesmirneTelesa.Slnecna_sustava;
@@ -105,6 +107,28 @@ public class Main {
         Singleton stvoritel = Singleton.getInstance();
 
         stvoritel.takeVesmir(svetos);
+
+        UniverseCarFactory mojatovaren = new UniverseCarFactory("Unicar");
+
+        Auto mpv = mojatovaren.produce("MPV");
+        Auto suv = mojatovaren.produce("SUV");
+        Auto sport = mojatovaren.produce("SportAuto");
+        Auto mini    = mojatovaren.produce("MiniAuto");
+
+        System.out.println(mpv);
+        System.out.println(suv);
+        System.out.println(sport);
+        System.out.println(mini);
+
+        Auto[] sklad = new Auto[2005];
+        int pocet_aut = 0;
+        UniverseCarFactory skoda = new UniverseCarFactory("Skoda");
+        for(int i =0; i<1000; i++ ){
+            Auto suv1 = skoda.produce("MPV");
+            sklad[pocet_aut++] = suv1;
+            Auto minik = skoda.produce("MiniAuto");
+            sklad[pocet_aut++] = minik;
+        }
 
         svetos.stop();
 

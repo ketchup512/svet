@@ -12,6 +12,7 @@ import com.company.zive_tvory.clovecina.Zena;
 import com.company.zive_tvory.stavovce.ryby.Kapor;
 import com.company.zive_tvory.stavovce.ryby.Orlik;
 import com.company.zive_tvory.stavovce.ryby.Pstruh;
+import tools.MessageReader;
 
 import java.util.Date;
 
@@ -92,6 +93,12 @@ public class Main {
 
         MatickaZem.addTvor(Kain);
         MatickaZem.addTvor(Abel);
+
+        MessageReader AdamovReader = new MessageReader();
+        AdamovReader.obtainFilename(args);
+        AdamovReader.openAndRead();;
+        AdamovReader.proccessMessage();
+
 
         svetos.stop();
 

@@ -3,16 +3,18 @@ import com.company.zive_tvory.Tvor;
 import java.io.File;  // Import the File class
 import java.io.IOException;
 import java.io.FileWriter;
+import java.util.ArrayList;
 
 public class MessageWriter {
 
-    private Tvor[] poleTvorov;
+    private ArrayList<Tvor> poleTvorov;
     private int pocetTvorov;
 
 
-    public MessageWriter(Tvor[] poleTvorov, int pocetTvorov) {
+    public MessageWriter( ArrayList<Tvor> poleTvorov) {
+
         this.poleTvorov = poleTvorov;
-        this.pocetTvorov = pocetTvorov;
+        this.pocetTvorov = poleTvorov.size();
     }
 
     public void WriteMessage(){
@@ -20,7 +22,7 @@ public class MessageWriter {
            FileWriter myWriter = new FileWriter("zoznamStvoritelaFromArray.txt");
 
         for(int i =0; i < pocetTvorov; i++){
-            String tvor = poleTvorov[i].getClass().getSimpleName();
+            String tvor = poleTvorov.get(i).getClass().getSimpleName();
            myWriter.write(tvor + '\n');
         }
            myWriter.close();

@@ -14,10 +14,10 @@ import com.company.zive_tvory.clovecina.Zena;
 import com.company.zive_tvory.stavovce.ryby.Kapor;
 import com.company.zive_tvory.stavovce.ryby.Orlik;
 import com.company.zive_tvory.stavovce.ryby.Pstruh;
-import com.company.zive_tvory.stavovce.ryby.Ryba;
 import tools.MessageReader;
 import tools.MessageWriter;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Main {
@@ -68,10 +68,10 @@ public class Main {
 
             MatickaZem.addTvor(new Delfin());
         }
-        Tvor[] poleTvorov = MatickaZem.getPoleTvorov();
+        ArrayList<Tvor> poleTvorov = MatickaZem.getPoleTvorov();
 
-        for (int i=0; i< MatickaZem.getPocet_Tvorov(); i++){
-            poleTvorov[i].hybsa(10,10,10);
+        for (int i=0; i< poleTvorov.size(); i++){
+            poleTvorov.get(i).hybsa(10,10,10);
         }
 
         Muz Adam = new Muz(null, null, 34, "Adam", "Prvy");
@@ -101,7 +101,7 @@ public class Main {
         AdamovReader.openAndRead();;
         AdamovReader.proccessMessage();
 
-        MessageWriter AdamovWriter = new MessageWriter(MatickaZem.getPoleTvorov(), MatickaZem.getPocet_Tvorov());
+        MessageWriter AdamovWriter = new MessageWriter(MatickaZem.getPoleTvorov());
         AdamovWriter.WriteMessage();
 
         Singleton stvoritel = Singleton.getInstance();
@@ -120,14 +120,14 @@ public class Main {
         System.out.println(sport);
         System.out.println(mini);
 
-        Auto[] sklad = new Auto[2005];
-        int pocet_aut = 0;
+        ArrayList<Auto> sklad = new ArrayList<Auto>();
         UniverseCarFactory skoda = new UniverseCarFactory("Skoda");
         for(int i =0; i<1000; i++ ){
             Auto suv1 = skoda.produce("MPV");
-            sklad[pocet_aut++] = suv1;
             Auto minik = skoda.produce("MiniAuto");
-            sklad[pocet_aut++] = minik;
+            sklad.add(suv1);
+            sklad.add(minik);
+
         }
 
         svetos.stop();

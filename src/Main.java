@@ -3,7 +3,7 @@ import com.company.space.vesmirneTelesa.Planeta;
 import com.company.space.vesmirneTelesa.Slnecna_sustava;
 import com.company.space.Galaxia;
 import com.company.space.vesmirneTelesa.Zem;
-import com.company.zive_tvory.Delfin;
+import com.company.zive_tvory.cicavce.Delfin;
 import com.company.zive_tvory.Tvor;
 import com.company.zive_tvory.bezstavovce.hmyz.Mucha;
 import com.company.zive_tvory.clovecina.Clovek;
@@ -12,7 +12,9 @@ import com.company.zive_tvory.clovecina.Zena;
 import com.company.zive_tvory.stavovce.ryby.Kapor;
 import com.company.zive_tvory.stavovce.ryby.Orlik;
 import com.company.zive_tvory.stavovce.ryby.Pstruh;
+import com.company.zive_tvory.stavovce.ryby.Ryba;
 import tools.MessageReader;
+import tools.MessageWriter;
 
 import java.util.Date;
 
@@ -60,10 +62,8 @@ public class Main {
         MatickaZem.addTvor(orlikObycajny);
         MatickaZem.addTvor(vianocnykapor);
         MatickaZem.addTvor(cervenarybka);
-        for (int i=0; i<50; i++){
-           // MatickaZem.addTvor(new Ryba(5));
-          //  MatickaZem.addTvor(new Vtak(5));
-          //  MatickaZem.addTvor(new Kapor(50));
+        for (int i=0; i<5; i++){
+
             MatickaZem.addTvor(new Delfin());
         }
         Tvor[] poleTvorov = MatickaZem.getPoleTvorov();
@@ -98,6 +98,9 @@ public class Main {
         AdamovReader.obtainFilename(args);
         AdamovReader.openAndRead();;
         AdamovReader.proccessMessage();
+
+        MessageWriter AdamovWriter = new MessageWriter(MatickaZem.getPoleTvorov(), MatickaZem.getPocet_Tvorov());
+    AdamovWriter.WriteMessage();
 
 
         svetos.stop();

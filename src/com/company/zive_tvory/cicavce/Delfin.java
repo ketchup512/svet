@@ -1,8 +1,10 @@
-package com.company.zive_tvory;
+package com.company.zive_tvory.cicavce;
+
+import com.company.zive_tvory.Tvor;
 
 import java.util.Date;
 
-public class Delfin extends Tvor{
+public class Delfin extends Tvor {
     @Override
     public void hybsa(int direction_x, int direction_y, int direction_z){
         setY(direction_y);

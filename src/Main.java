@@ -100,8 +100,11 @@ public class Main {
         AdamovReader.proccessMessage();
 
         MessageWriter AdamovWriter = new MessageWriter(MatickaZem.getPoleTvorov(), MatickaZem.getPocet_Tvorov());
-    AdamovWriter.WriteMessage();
+        AdamovWriter.WriteMessage();
 
+        Singleton stvoritel = Singleton.getInstance();
+
+        stvoritel.takeVesmir(svetos);
 
         svetos.stop();
 

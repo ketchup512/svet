@@ -17,14 +17,17 @@ public class MessageReader {
     }
 
     public void obtainFilename(String arguments[]){
-        if (arguments.length >= 1){
-            filename = arguments[0];
-        }
-        else{
-            Scanner inputReader = new Scanner(System.in);
-            System.out.println("Zadaj nazov suboru: ");
-            filename = inputReader.nextLine();
-        }
+//        if (arguments.length >= 1){
+//            filename = arguments[0];
+//        }
+//        else{
+//            Scanner inputReader = new Scanner(System.in);
+//            System.out.println("Zadaj nazov suboru: ");
+//            filename = inputReader.nextLine();
+//        }
+
+
+        filename = "zoznamStvoritelaFromArray.txt";
         System.out.println("Subor na spracovanie " + filename);
     }
 

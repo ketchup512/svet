@@ -24,9 +24,9 @@ public class MessageWriter {
            myWriter.write(tvor + '\n');
         }
            myWriter.close();
-           System.out.println("Successfully wrote to the file.");
+           System.out.println("Tvory zapisane to suboru.");
        } catch (IOException e) {
-           System.out.println("An error occurred.");
+           System.out.println("No ta chyba sa stala");
            e.printStackTrace();
        }
    }
